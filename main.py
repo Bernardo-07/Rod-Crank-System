@@ -6,7 +6,7 @@ manivela = 16
 biela = 92
 
 #cálculo dos angulos
-teta = np.arange(0, 360, 1)
+teta = np.arange(0, 360, 10)
 teta = np.radians(teta)
 beta = np.arcsin((manivela*np.sin(teta))/biela)
 
@@ -21,6 +21,17 @@ for i in range(0, len(teta)):
     xb = (biela*np.cos(beta)) + xa
     yb[i] = 0
 
-plt.scatter(xa, ya)
-plt.scatter(xb, yb)
-plt.show()
+plt.ion()
+
+plt.scatter(xa, ya, marker = '.', color = 'b')
+plt.scatter(xb, yb, marker = '.', color = 'k')
+plt.pause(3)
+
+plt.cla()
+plt.clf()
+
+plt.scatter(xb, ya, marker = '.', color = 'b')
+plt.scatter(xa, yb, marker = '.', color = 'k')
+plt.pause(3)
+
+plt.ioff()
