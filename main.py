@@ -23,15 +23,14 @@ for i in range(0, len(teta)):
 
 plt.ion()
 
-plt.scatter(xa, ya, marker = '.', color = 'b')
-plt.scatter(xb, yb, marker = '.', color = 'k')
-plt.pause(3)
+for i in range(len(teta)):
 
-plt.cla()
-plt.clf()
+    plt.scatter(xa[i], ya[i], marker = '.', color = 'b')
+    plt.scatter(xb[i], yb[i], marker = '.', color = 'k')
+    plt.grid(True)
 
-plt.scatter(xb, ya, marker = '.', color = 'b')
-plt.scatter(xa, yb, marker = '.', color = 'k')
-plt.pause(3)
+    plt.pause(0.1)
+    plt.cla()
+    plt.clf()
 
 plt.ioff()
