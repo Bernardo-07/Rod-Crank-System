@@ -29,6 +29,14 @@ for i in range(len(teta)):
     plt.scatter(xb[i], yb[i], marker = '.', color = 'k')
     plt.grid(True)
 
+    #calculo dos limites da escala de x e y
+    a = -manivela -10
+    b = manivela + biela +10
+    c = -manivela -5
+    d = manivela +5
+    plt.xlim(a, b)
+    plt.ylim(c, d)
+
     plt.pause(0.1)
     plt.cla()
     plt.clf()
