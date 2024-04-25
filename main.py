@@ -5,8 +5,11 @@ import numpy as np
 manivela = 41
 biela = 92
 
+aux = int(input("Quantas voltas o gráfico deve rodar? "))
+degree = aux*360
+
 #cálculo dos angulos
-teta = np.arange(0, 361, 10)
+teta = np.arange(0, degree+1, 10)
 teta = np.radians(teta)
 beta = np.arcsin((manivela*np.sin(teta))/biela)
 
@@ -37,8 +40,8 @@ for i in range(0, len(teta)):
     plt.grid(True)
 
     #calculo dos limites da escala de x e y
-    a = -manivela - biela - 5
-    b = manivela + biela + 5
+    a = -manivela - biela + 5
+    b = manivela + biela + 15
     c = -manivela - biela - 5
     d = manivela + biela + 5
     plt.xlim(a, b)
